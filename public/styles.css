@@ -1,0 +1,493 @@
+/*
+  Name: Kyler Gray
+  Date: 05.18.2021
+  Section: CSE 154 AD
+
+  This is the styles.css file for the index.html for the UW discord directory. It handles
+  all styling of the webpage to make it easy to use and interact with for the user. This
+  spans from layout, to fonts, to colors and more!
+*/
+:root {
+  /* All colors in pallete pulled from https://discord.com */
+  --header-primary: #fff;
+  --header-secondary: #b9bbbe;
+  --text-normal: rgb(46, 51, 56);
+  --text-muted: #72767d;
+  --text-link: #00b0f4;
+  --text-positive: #4fdc7b;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #fff;
+  --interactive-muted: #4f545c;
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-secondary-alt: #292b2f;
+  --background-tertiary: #202225;
+  --background-accent: #4f545c;
+  --background-floating: #18191c;
+  --background-mobile-primary: #36393f;
+  --background-mobile-secondary: #2f3136;
+  --background-modifier-hover: rgba(79, 84, 92, 0.16);
+  --background-modifier-active: rgba(79, 84, 92, 0.24);
+  --background-modifier-selected: rgba(79, 84, 92, 0.32);
+  --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
+  --background-text-input: rgba(79, 84, 92, 0.02);
+  --text-input-border: rgb(118, 118, 118);
+  --text-input-border-active: rgba(7, 101, 213, 0.84);
+  --button-input-background: rgb(114, 137, 218);
+  --button-input-background-hover: rgb(92, 111, 177);
+  --info-positive-text: #fff;
+  --info-warning-text: #fff;
+  --info-danger-text: #fff;
+  --info-help-background: rgba(0, 176, 244, 0.1);
+  --info-help-foreground: #00b0f4;
+  --info-help-text: #fff;
+  --status-warning-text: #000;
+  --scrollbar-thin-thumb: #202225;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #202225;
+  --scrollbar-auto-track: #2e3338;
+  --scrollbar-auto-scrollbar-color-thumb: #202225;
+  --scrollbar-auto-scrollbar-color-track: #2f3136;
+  --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
+  --elevation-medium: 0 4px 4px rgba(0, 0, 0, 0.16);
+  --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+  --logo-primary: #fff;
+  --control-brand-foreground: #a5b3e7;
+  --background-mentioned: rgba(250, 166, 26, 0.1);
+  --background-mentioned-hover: rgba(250, 166, 26, 0.08);
+  --background-message-hover: rgba(4, 4, 5, 0.07);
+  --channels-default: #8e9297;
+  --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  --channeltextarea-background: #40444b;
+  --activity-card-background: #202225;
+  --textbox-markdown-syntax: #8e9297;
+  --deprecated-card-bg: rgba(32, 34, 37, 0.6);
+  --text-warning: #faa61a;
+  --text-danger: #ed4245;
+  --info-positive-background: rgba(59, 165, 92, 0.1);
+  --info-positive-foreground: #3ba55c;
+  --info-warning-background: rgba(250, 166, 26, 0.1);
+  --info-warning-foreground: #faa61a;
+  --info-danger-background: rgba(237, 66, 69, 0.1);
+  --info-danger-foreground: #ed4245;
+  --status-positive-background: #3ba55c;
+  --status-positive-text: #fff;
+  --status-warning-background: #faa61a;
+  --status-danger-background: #ed4245;
+  --status-danger-text: #fff;
+  --focus-primary: #00b0f4;
+  --popup-backdrop: rgb(246, 246, 247);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  color: var(--text-muted);
+  background-color: var(--background-tertiary);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin: 0;
+  font-weight: 800;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+aside {
+  background-color: var(--background-secondary);
+  min-width: 250px;
+  height: (100vh - 38px);
+  overflow: hidden;
+}
+
+aside h2 {
+  color: var(--header-primary);
+  border-bottom: 1px solid var(--background-floating);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8em;
+  margin: 0;
+}
+
+aside section {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+aside ul {
+  list-style-type: none;
+  color: var(--channels-default);
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0;
+  margin: 2rem 1rem;
+  font-weight: 600;
+}
+
+aside li {
+  color: var(--channels-default);
+  text-transform: lowercase;
+  font-size: 1.2rem;
+  padding: 0.25em 0.6em;
+  margin-top: 0.2em;
+  border-radius: 0.2em;
+  font-weight: 400;
+}
+
+aside li:hover {
+  background-color: rgb(54, 57, 63);
+  color: var(--header-secondary);
+  cursor: pointer;
+}
+
+aside li.selected {
+  color: var(--interactive-active);
+  background-color: #393c43;
+}
+
+aside li:before {
+  font-family: 'Montserrat', sans-serif;
+  content: "#";
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  padding: 0.5em 0.25em 0.5em 0;
+}
+
+#pound {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: var(--header-primary);
+  background-color: var(--background-accent);
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#server-results {
+  flex-grow: 1;
+  height: (100vh - 38px);
+  overflow: hidden;
+}
+
+#server-results > a {
+  color: var(--interactive-normal);
+  border-bottom: 1px solid var(--background-floating);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8em;
+  margin: 0;
+  width: calc(100% - 1.6em);
+  display: block;
+  text-align: right;
+  cursor: pointer;
+}
+
+#server-results > a:hover {
+  color: var(--header-primary);
+}
+
+#server-results section {
+  margin-right: 0.5rem;
+  padding: 2rem;
+  height: calc(100% - 124px);
+  overflow-y: auto;
+}
+
+#server-results section > h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.25em 0;
+  color: var(--header-primary);
+}
+
+#server-results section > p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0 0 1em 0;
+  color: var(--header-secondary);
+  border-bottom: 1px solid var(--background-accent);
+}
+
+#display-results {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.serverCard {
+  width: calc(50% - 4rem);
+  background-color: var(--background-secondary);
+  border-radius: 0.25em;
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 1rem;
+}
+
+@media only screen and (max-width: 1030px) {
+  .serverCard {
+    width: calc(100% - 4rem);
+  }
+}
+
+.serverCard h2 {
+  margin: 0 0 1em 0;
+  color: var(--interactive-normal);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  width: 100%;
+}
+
+.serverCard a {
+  background-color: var(--info-positive-foreground);
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  color: var(--header-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  transition: 0.17s ease background-color;
+}
+
+.serverCard a:hover {
+  background-color: #359553;
+}
+
+.serverCard .info {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+}
+
+.serverCard .info h3 {
+  color: var(--header-primary);
+  font-size: 1.25rem;
+  margin: 0;
+  width: fit-content;
+}
+
+.serverCard .info p {
+  color: var(--interactive-normal);
+  font-size: 1rem;
+  margin: 0 0.5rem 0 0;
+  position: relative;
+}
+
+.serverCard .info span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.serverCard .info span:before {
+  content: "";
+  background-color: var(--text-muted);
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.3rem 2px 0;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.serverCard .info span.green:before {
+  background-color: var(--info-positive-foreground);
+}
+
+#error, #message {
+  position: fixed;
+  display: block;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  background-color: var(--background-secondary);
+  width: 100%;
+  max-width: calc(440px - 3rem);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  opacity: 1;
+  box-shadow: 0 0.5rem 0.5rem var(--background-tertiary);
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.15s ease-in-out,
+    0.2s visibility linear;
+}
+
+#error strong, #message strong {
+  font-weight: 700;
+}
+
+#error strong {
+  color: var(--text-danger);
+}
+
+#message strong {
+  color: var(--text-positive);
+}
+
+#error > p, #message > p {
+  color: var(--channels-default);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#popup {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--background-secondary);
+  width: 100%;
+  max-width: calc(440px - 3rem);
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  opacity: 1;
+  box-shadow: 0 0.5rem 0.5rem var(--background-tertiary);
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.15s ease-in-out,
+    0.2s visibility linear;
+}
+
+#popup.hidden, #error.hidden, #message.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3);
+}
+
+#popup h2 {
+  color: var(--header-primary);
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+#popup > p {
+  color: var(--channels-default);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#popup > a {
+  position: absolute;
+  padding: 0.5rem 0.5rem;
+  color: var(--header-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1rem;
+  transition: 0.17s ease background-color;
+  bottom: 2rem;
+}
+
+#popup > form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#popup > form label {
+  list-style-type: none;
+  color: var(--channels-default);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+}
+
+#popup > form input {
+  background-color: var(--background-primary);
+  border: 1px solid var(--text-input-border);
+  transition: 0.2s ease-in-out border-color;
+  outline: none;
+  border-radius: 0.25rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: var(--channels-default);
+}
+
+#popup > form input:focus {
+  border: 1px solid var(--button-input-background);
+}
+
+#popup > form p {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+#popup:after {
+  content: '';
+  width: 100%;
+  height: calc(50px + 3rem);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-primary);
+  z-index: -1;
+}
+
+#popup > form button {
+  background-color: var(--button-input-background);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  width: fit-content;
+  align-self: flex-end;
+  color: var(--header-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: 0.17s ease background-color;
+}
+
+#popup > form button:hover {
+  background-color: var(--button-input-background-hover);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+  background: var(--background-secondary);
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-auto-scrollbar-color-thumb);
+  border-radius: 4px;
+}

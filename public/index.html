@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Name: Kyler Gray
+  Date: 05.18.2021
+  Section: CSE 154 AD
+
+  This is the index.html page for the UW discord directory. It holds all of the core content
+  of the webpage including the explore bar, the display, and the popups! This page also links
+  to the necessary JavaScript and CSS to make the site functional!
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UW Discord Directory</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>University of Washington Discord Directory</h1>
+  </header>
+  <main>
+    <aside>
+      <h2>Explore Servers</h2>
+      <section></section>
+    </aside>
+    <article id="server-results">
+      <a id="add-button">Add Server</a>
+      <section>
+        <span id="pound">#</span>
+        <h2>Click options to explore!</h2>
+        <p>Here is what we've found, hope you find something good!</p>
+        <div id="display-results">
+        </div>
+      </section>
+    </article>
+  </main>
+  <article id="popup" class="hidden">
+    <h2>Connect your server</h2>
+    <p>Please only add UW related servers!</p>
+    <form id="popup-form">
+      <label for="name-box">Server Name</label>
+      <input type="text" id="name-box" name="name" required>
+      <label for="link-box">Invite Link</label>
+      <input type="text" id="link-box" name="link" required>
+      <label for="type-box">Server Type</label>
+      <input type="text" id="type-box" name="type" required>
+      <label for="prefix-box">Course Prefix</label>
+      <input type="text" id="prefix-box" name="prefix" required>
+      <p>Your server may be manually removed if it is not UW related</p>
+      <button type="submit">Connect</button>
+    </form>
+    <a id="close-button">Close</a>
+  </article>
+  <article id="error" class="hidden">
+    <p><strong>uh oh! </strong><span></span></p>
+  </article>
+  <article id="message" class="hidden">
+    <p><strong>Yay! </strong><span></span></p>
+  </article>
+</body>
+</html>

@@ -1,0 +1,149 @@
+{
+  "searchParameters": {
+    "parameters": [
+      "serverTypes",
+      "coursePrefixes"
+    ],
+    "serverTypes": [
+      "any",
+      "community",
+      "course",
+      "rso"
+    ],
+    "coursePrefixes": [
+      "any",
+      "AA",
+      "AIS",
+      "ARCH",
+      "ART",
+      "ASTR",
+      "ATM",
+      "BH",
+      "BIOL",
+      "GENOME",
+      "CHEM"
+    ]
+  },
+  "servers": [
+    {
+      "name": "AA 260 (21sp)",
+      "link": "https://discord.gg/SpUNz7fuRR",
+      "prefix": "AA",
+      "type": "course"
+    },
+    {
+      "name": "AA 210 (21sp)",
+      "link": "https://discord.gg/fRzUhpN3w4",
+      "prefix": "AA",
+      "type": "course"
+    },
+    {
+      "name": "AIS 103",
+      "link": "https://discord.gg/CkHCeYpktH",
+      "prefix": "AIS",
+      "type": "course"
+    },
+    {
+      "name": "ARCH 151",
+      "link": "https://discord.gg/sAd3aASGk7",
+      "prefix": "ARCH",
+      "type": "course"
+    },
+    {
+      "name": "ART 290",
+      "link": "https://discord.gg/TxmwuUTjSg",
+      "prefix": "ART",
+      "type": "course"
+    },
+    {
+      "name": "ASTR 101",
+      "link": "https://discord.gg/cMAJf3ZuEd",
+      "prefix": "ASTR",
+      "type": "course"
+    },
+    {
+      "name": "ATM S 103 (21sp)",
+      "link": "https://discord.gg/pbMVBSkNVC",
+      "prefix": "ATM",
+      "type": "course"
+    },
+    {
+      "name": "B H 311",
+      "link": "https://discord.gg/XRY72qU25U",
+      "prefix": "BH",
+      "type": "course"
+    },
+    {
+      "name": "BIOL 350",
+      "link": "https://discord.gg/QSdABZZ4NF",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "BIOL 354, BIOL 355",
+      "link": "https://discord.gg/QhNGenGV2b",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "BIO 180 / BIOL 180 (21sp)",
+      "link": "https://discord.gg/QHW2F7UxqK",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "BIO 118 / BIOL 118",
+      "link": "https://discord.gg/wKAtf74UFh",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "BIO 200 / BIOL 200 (21sp)",
+      "link": "https://discord.gg/U9pxqPRGXE",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "BIOL 404 / BIOL 404",
+      "link": "https://discord.gg/k39GfDGQgx",
+      "prefix": "BIOL",
+      "type": "course"
+    },
+    {
+      "name": "GENOME 371",
+      "link": "https://discord.gg/SxKsPWYtcE",
+      "prefix": "GENOME",
+      "type": "course"
+    },
+    {
+      "name": "Immunology 441",
+      "link": "https://discord.gg/bQ397DKUWY",
+      "prefix": "GENOME",
+      "type": "course"
+    },
+    {
+      "name": "ASTR 101",
+      "link": "https://discord.gg/cMAJf3ZuEd",
+      "prefix": "ASTR",
+      "type": "course"
+    },
+    {
+      "name": "ASTR 101",
+      "link": "https://discord.gg/cMAJf3ZuEd",
+      "prefix": "ASTR",
+      "type": "course"
+    },
+    {
+      "name": "CHEM 152 (21wi) ; CHEM 162 (21sp)",
+      "link": "https://discord.gg/AdSMW9yNYu",
+      "type": "course",
+      "prefix": "CHEM"
+    },
+    {
+      "name": "CHEM 142 (21sp)",
+      "link": "https://discord.gg/QmZbfuqU58",
+      "type": "course",
+      "prefix": "CHEM"
+    }
+  ]
+}
