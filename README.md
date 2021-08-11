@@ -24,11 +24,11 @@ servers with
     "AA",
     "AIS",
     "ARCH",
-  ]
+  ],
   "parameters": [
     "serverTypes",
     "coursePrefixes"
-  ]
+  ],
   "serverTypes": [
     "any",
     "community",
